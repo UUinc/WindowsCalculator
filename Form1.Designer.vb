@@ -109,15 +109,16 @@ Partial Class Form1
         'back_BTN
         '
         Me.back_BTN.BackColor = System.Drawing.Color.FromArgb(CType(CType(19, Byte), Integer), CType(CType(19, Byte), Integer), CType(CType(19, Byte), Integer))
+        Me.back_BTN.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.back_BTN.FlatAppearance.BorderSize = 0
         Me.back_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.back_BTN.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.back_BTN.ForeColor = System.Drawing.Color.White
+        Me.back_BTN.Image = New Bitmap(Global.Calculator.My.Resources.Resources.back, 24, 24)
         Me.back_BTN.Location = New System.Drawing.Point(280, 188)
         Me.back_BTN.Name = "back_BTN"
         Me.back_BTN.Size = New System.Drawing.Size(90, 58)
         Me.back_BTN.TabIndex = 4
-        Me.back_BTN.Text = "<-"
         Me.back_BTN.UseVisualStyleBackColor = False
         '
         'div_BTN
@@ -125,7 +126,7 @@ Partial Class Form1
         Me.div_BTN.BackColor = System.Drawing.Color.FromArgb(CType(CType(19, Byte), Integer), CType(CType(19, Byte), Integer), CType(CType(19, Byte), Integer))
         Me.div_BTN.FlatAppearance.BorderSize = 0
         Me.div_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.div_BTN.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.div_BTN.Font = New System.Drawing.Font("Segoe UI", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.div_BTN.ForeColor = System.Drawing.Color.White
         Me.div_BTN.Location = New System.Drawing.Point(280, 248)
         Me.div_BTN.Name = "div_BTN"
@@ -159,7 +160,7 @@ Partial Class Form1
         Me.square_BTN.Name = "square_BTN"
         Me.square_BTN.Size = New System.Drawing.Size(90, 58)
         Me.square_BTN.TabIndex = 6
-        Me.square_BTN.Text = "x^2"
+        Me.square_BTN.Text = "x²"
         Me.square_BTN.UseVisualStyleBackColor = False
         '
         'powMinus1_BTN
@@ -181,7 +182,7 @@ Partial Class Form1
         Me.mul_BTN.BackColor = System.Drawing.Color.FromArgb(CType(CType(19, Byte), Integer), CType(CType(19, Byte), Integer), CType(CType(19, Byte), Integer))
         Me.mul_BTN.FlatAppearance.BorderSize = 0
         Me.mul_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.mul_BTN.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.mul_BTN.Font = New System.Drawing.Font("Segoe UI", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.mul_BTN.ForeColor = System.Drawing.Color.White
         Me.mul_BTN.Location = New System.Drawing.Point(280, 308)
         Me.mul_BTN.Name = "mul_BTN"
@@ -195,7 +196,7 @@ Partial Class Form1
         Me.num9_BTN.BackColor = System.Drawing.Color.FromArgb(CType(CType(6, Byte), Integer), CType(CType(6, Byte), Integer), CType(CType(6, Byte), Integer))
         Me.num9_BTN.FlatAppearance.BorderSize = 0
         Me.num9_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.num9_BTN.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.num9_BTN.Font = New System.Drawing.Font("Segoe UI Black", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.num9_BTN.ForeColor = System.Drawing.Color.White
         Me.num9_BTN.Location = New System.Drawing.Point(188, 308)
         Me.num9_BTN.Name = "num9_BTN"
@@ -209,7 +210,7 @@ Partial Class Form1
         Me.num8_BTN.BackColor = System.Drawing.Color.FromArgb(CType(CType(6, Byte), Integer), CType(CType(6, Byte), Integer), CType(CType(6, Byte), Integer))
         Me.num8_BTN.FlatAppearance.BorderSize = 0
         Me.num8_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.num8_BTN.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.num8_BTN.Font = New System.Drawing.Font("Segoe UI Black", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.num8_BTN.ForeColor = System.Drawing.Color.White
         Me.num8_BTN.Location = New System.Drawing.Point(96, 308)
         Me.num8_BTN.Name = "num8_BTN"
@@ -223,7 +224,7 @@ Partial Class Form1
         Me.num7_BTN.BackColor = System.Drawing.Color.FromArgb(CType(CType(6, Byte), Integer), CType(CType(6, Byte), Integer), CType(CType(6, Byte), Integer))
         Me.num7_BTN.FlatAppearance.BorderSize = 0
         Me.num7_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.num7_BTN.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.num7_BTN.Font = New System.Drawing.Font("Segoe UI Black", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.num7_BTN.ForeColor = System.Drawing.Color.White
         Me.num7_BTN.Location = New System.Drawing.Point(4, 308)
         Me.num7_BTN.Name = "num7_BTN"
@@ -237,7 +238,7 @@ Partial Class Form1
         Me.sub_BTN.BackColor = System.Drawing.Color.FromArgb(CType(CType(19, Byte), Integer), CType(CType(19, Byte), Integer), CType(CType(19, Byte), Integer))
         Me.sub_BTN.FlatAppearance.BorderSize = 0
         Me.sub_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.sub_BTN.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.sub_BTN.Font = New System.Drawing.Font("Segoe UI", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.sub_BTN.ForeColor = System.Drawing.Color.White
         Me.sub_BTN.Location = New System.Drawing.Point(280, 368)
         Me.sub_BTN.Name = "sub_BTN"
@@ -251,7 +252,7 @@ Partial Class Form1
         Me.num6_BTN.BackColor = System.Drawing.Color.FromArgb(CType(CType(6, Byte), Integer), CType(CType(6, Byte), Integer), CType(CType(6, Byte), Integer))
         Me.num6_BTN.FlatAppearance.BorderSize = 0
         Me.num6_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.num6_BTN.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.num6_BTN.Font = New System.Drawing.Font("Segoe UI Black", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.num6_BTN.ForeColor = System.Drawing.Color.White
         Me.num6_BTN.Location = New System.Drawing.Point(188, 368)
         Me.num6_BTN.Name = "num6_BTN"
@@ -265,7 +266,7 @@ Partial Class Form1
         Me.num5_BTN.BackColor = System.Drawing.Color.FromArgb(CType(CType(6, Byte), Integer), CType(CType(6, Byte), Integer), CType(CType(6, Byte), Integer))
         Me.num5_BTN.FlatAppearance.BorderSize = 0
         Me.num5_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.num5_BTN.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.num5_BTN.Font = New System.Drawing.Font("Segoe UI Black", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.num5_BTN.ForeColor = System.Drawing.Color.White
         Me.num5_BTN.Location = New System.Drawing.Point(96, 368)
         Me.num5_BTN.Name = "num5_BTN"
@@ -279,7 +280,7 @@ Partial Class Form1
         Me.num4_BTN.BackColor = System.Drawing.Color.FromArgb(CType(CType(6, Byte), Integer), CType(CType(6, Byte), Integer), CType(CType(6, Byte), Integer))
         Me.num4_BTN.FlatAppearance.BorderSize = 0
         Me.num4_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.num4_BTN.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.num4_BTN.Font = New System.Drawing.Font("Segoe UI Black", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.num4_BTN.ForeColor = System.Drawing.Color.White
         Me.num4_BTN.Location = New System.Drawing.Point(4, 368)
         Me.num4_BTN.Name = "num4_BTN"
@@ -293,7 +294,7 @@ Partial Class Form1
         Me.add_BTN.BackColor = System.Drawing.Color.FromArgb(CType(CType(19, Byte), Integer), CType(CType(19, Byte), Integer), CType(CType(19, Byte), Integer))
         Me.add_BTN.FlatAppearance.BorderSize = 0
         Me.add_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.add_BTN.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.add_BTN.Font = New System.Drawing.Font("Segoe UI", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.add_BTN.ForeColor = System.Drawing.Color.White
         Me.add_BTN.Location = New System.Drawing.Point(280, 428)
         Me.add_BTN.Name = "add_BTN"
@@ -307,7 +308,7 @@ Partial Class Form1
         Me.num3_BTN.BackColor = System.Drawing.Color.FromArgb(CType(CType(6, Byte), Integer), CType(CType(6, Byte), Integer), CType(CType(6, Byte), Integer))
         Me.num3_BTN.FlatAppearance.BorderSize = 0
         Me.num3_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.num3_BTN.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.num3_BTN.Font = New System.Drawing.Font("Segoe UI Black", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.num3_BTN.ForeColor = System.Drawing.Color.White
         Me.num3_BTN.Location = New System.Drawing.Point(188, 428)
         Me.num3_BTN.Name = "num3_BTN"
@@ -321,7 +322,7 @@ Partial Class Form1
         Me.num2_BTN.BackColor = System.Drawing.Color.FromArgb(CType(CType(6, Byte), Integer), CType(CType(6, Byte), Integer), CType(CType(6, Byte), Integer))
         Me.num2_BTN.FlatAppearance.BorderSize = 0
         Me.num2_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.num2_BTN.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.num2_BTN.Font = New System.Drawing.Font("Segoe UI Black", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.num2_BTN.ForeColor = System.Drawing.Color.White
         Me.num2_BTN.Location = New System.Drawing.Point(96, 428)
         Me.num2_BTN.Name = "num2_BTN"
@@ -335,7 +336,7 @@ Partial Class Form1
         Me.num1_BTN.BackColor = System.Drawing.Color.FromArgb(CType(CType(6, Byte), Integer), CType(CType(6, Byte), Integer), CType(CType(6, Byte), Integer))
         Me.num1_BTN.FlatAppearance.BorderSize = 0
         Me.num1_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.num1_BTN.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.num1_BTN.Font = New System.Drawing.Font("Segoe UI Black", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.num1_BTN.ForeColor = System.Drawing.Color.White
         Me.num1_BTN.Location = New System.Drawing.Point(4, 428)
         Me.num1_BTN.Name = "num1_BTN"
@@ -349,7 +350,7 @@ Partial Class Form1
         Me.result_BTN.BackColor = System.Drawing.Color.FromArgb(CType(CType(21, Byte), Integer), CType(CType(91, Byte), Integer), CType(CType(104, Byte), Integer))
         Me.result_BTN.FlatAppearance.BorderSize = 0
         Me.result_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.result_BTN.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.result_BTN.Font = New System.Drawing.Font("Segoe UI", 20.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.result_BTN.ForeColor = System.Drawing.Color.White
         Me.result_BTN.Location = New System.Drawing.Point(280, 488)
         Me.result_BTN.Name = "result_BTN"
@@ -363,7 +364,7 @@ Partial Class Form1
         Me.comma_BTN.BackColor = System.Drawing.Color.FromArgb(CType(CType(6, Byte), Integer), CType(CType(6, Byte), Integer), CType(CType(6, Byte), Integer))
         Me.comma_BTN.FlatAppearance.BorderSize = 0
         Me.comma_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.comma_BTN.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.comma_BTN.Font = New System.Drawing.Font("Segoe UI Black", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.comma_BTN.ForeColor = System.Drawing.Color.White
         Me.comma_BTN.Location = New System.Drawing.Point(188, 488)
         Me.comma_BTN.Name = "comma_BTN"
@@ -377,7 +378,7 @@ Partial Class Form1
         Me.num0_BTN.BackColor = System.Drawing.Color.FromArgb(CType(CType(6, Byte), Integer), CType(CType(6, Byte), Integer), CType(CType(6, Byte), Integer))
         Me.num0_BTN.FlatAppearance.BorderSize = 0
         Me.num0_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.num0_BTN.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.num0_BTN.Font = New System.Drawing.Font("Segoe UI Black", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.num0_BTN.ForeColor = System.Drawing.Color.White
         Me.num0_BTN.Location = New System.Drawing.Point(96, 488)
         Me.num0_BTN.Name = "num0_BTN"
@@ -391,13 +392,13 @@ Partial Class Form1
         Me.sign_BTN.BackColor = System.Drawing.Color.FromArgb(CType(CType(6, Byte), Integer), CType(CType(6, Byte), Integer), CType(CType(6, Byte), Integer))
         Me.sign_BTN.FlatAppearance.BorderSize = 0
         Me.sign_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.sign_BTN.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.sign_BTN.Font = New System.Drawing.Font("Segoe UI Black", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.sign_BTN.ForeColor = System.Drawing.Color.White
         Me.sign_BTN.Location = New System.Drawing.Point(4, 488)
         Me.sign_BTN.Name = "sign_BTN"
         Me.sign_BTN.Size = New System.Drawing.Size(90, 58)
         Me.sign_BTN.TabIndex = 21
-        Me.sign_BTN.Text = "+/-"
+        Me.sign_BTN.Text = "+/−"
         Me.sign_BTN.UseVisualStyleBackColor = False
         '
         'Form1
