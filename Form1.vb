@@ -1,8 +1,7 @@
 ﻿Public Class Form1
 
     Dim operand1, operand2 As Double
-    Dim op As Char
-    Dim isDot As Boolean = False
+    Dim op As Char = " "c
     Dim isOperand2 As Boolean = False
     Dim isResult As Boolean = False
 
@@ -42,10 +41,15 @@
         If isResult Then
             formula_TB.Text = ""
         End If
-        'Dont insert another number if the size is over 14 char
-        If main_TB.Text.Length > 12 Then
-            Return
+
+        If main_TB.Text.Length > 21 Then
+            main_TB.Font = New Font("Segoe UI Semibold", 9.0!, FontStyle.Bold, GraphicsUnit.Point)
+        ElseIf main_TB.Text.Length > 13 Then
+            main_TB.Font = New Font("Segoe UI Semibold", 22.0!, FontStyle.Bold, GraphicsUnit.Point)
+        Else
+            main_TB.Font = New Font("Segoe UI Semibold", 34.0!, FontStyle.Bold, GraphicsUnit.Point)
         End If
+
         'If the number is 0 change it to a number entered
         If main_TB.Text = "0" Or isOperand2 Then
             main_TB.Text = num.ToString()
@@ -59,26 +63,28 @@
 
     Private Sub comma_BTN_Click(sender As Object, e As EventArgs) Handles comma_BTN.Click
 
-        'Dont insert another number if the size is over 14 char
-        If main_TB.Text.Length > 12 Then
+        If main_TB.Text.Contains("."c) Then
+            main_TB.Text = "0."
+            isOperand2 = False
             Return
         End If
 
-        If Not isDot Then
-            main_TB.Text += "."
-            isDot = True
-        End If
+        main_TB.Text += "."
     End Sub
 
     'Calculator Tools
     Private Sub back_BTN_Click(sender As Object, e As EventArgs) Handles back_BTN.Click
         formula_TB.Text = ""
 
+        If main_TB.Text.Length > 13 Then
+            main_TB.Font = New Font("Segoe UI Semibold", 22.0!, FontStyle.Bold, GraphicsUnit.Point)
+        Else
+            main_TB.Font = New Font("Segoe UI Semibold", 34.0!, FontStyle.Bold, GraphicsUnit.Point)
+        End If
+
         If main_TB.Text.Length = 0 Then
             Return
         End If
-        'if dot removed make it available
-        isDot = main_TB.Text.Contains("."c)
 
         main_TB.Text = main_TB.Text.Remove(main_TB.Text.Length - 1)
         If main_TB.Text.Length = 0 Then
@@ -87,17 +93,19 @@
     End Sub
 
     Private Sub c_BTN_Click(sender As Object, e As EventArgs) Handles c_BTN.Click
-        isDot = False
         isResult = False
         formula_TB.Text = ""
         main_TB.Text = "0"
+
+        main_TB.Font = New Font("Segoe UI Semibold", 34.0!, FontStyle.Bold, GraphicsUnit.Point)
     End Sub
 
     Private Sub ce_BTN_Click(sender As Object, e As EventArgs) Handles ce_BTN.Click
-        isDot = False
         isResult = False
         formula_TB.Text = ""
         main_TB.Text = "0"
+
+        main_TB.Font = New Font("Segoe UI Semibold", 34.0!, FontStyle.Bold, GraphicsUnit.Point)
     End Sub
 
     'Change the sign of the number
@@ -133,6 +141,70 @@
     Private Sub div_BTN_Click(sender As Object, e As EventArgs) Handles div_BTN.Click
         Calculate("÷"c)
     End Sub
+    Private Sub powMinus1_BTN_Click(sender As Object, e As EventArgs) Handles powMinus1_BTN.Click
+        operand1 = Double.Parse(main_TB.Text)
+
+        formula_TB.Text = "1/(" + operand1.ToString() + ")"
+
+        isOperand2 = True
+
+        If operand1 = 0 Then
+            main_TB.Text = "Cannot divide by zero"
+        Else
+            main_TB.Text = 1 / operand1
+        End If
+
+        If main_TB.Text.Length > 13 Then
+            main_TB.Font = New Font("Segoe UI Semibold", 22.0!, FontStyle.Bold, GraphicsUnit.Point)
+        Else
+            main_TB.Font = New Font("Segoe UI Semibold", 34.0!, FontStyle.Bold, GraphicsUnit.Point)
+        End If
+
+    End Sub
+
+    Private Sub square_BTN_Click(sender As Object, e As EventArgs) Handles square_BTN.Click
+        operand1 = Double.Parse(main_TB.Text)
+
+        formula_TB.Text = "sqr(" + operand1.ToString() + ")"
+
+        isOperand2 = True
+
+        main_TB.Text = operand1 ^ 2
+
+        If main_TB.Text.Length > 13 Then
+            main_TB.Font = New Font("Segoe UI Semibold", 22.0!, FontStyle.Bold, GraphicsUnit.Point)
+        Else
+            main_TB.Font = New Font("Segoe UI Semibold", 34.0!, FontStyle.Bold, GraphicsUnit.Point)
+        End If
+    End Sub
+
+    Private Sub sqrt_BTN_Click(sender As Object, e As EventArgs) Handles sqrt_BTN.Click
+        operand1 = Double.Parse(main_TB.Text)
+
+        formula_TB.Text = "√(" + operand1.ToString() + ")"
+
+        isOperand2 = True
+
+        main_TB.Text = Math.Sqrt(operand1)
+
+        If main_TB.Text.Length > 13 Then
+            main_TB.Font = New Font("Segoe UI Semibold", 22.0!, FontStyle.Bold, GraphicsUnit.Point)
+        Else
+            main_TB.Font = New Font("Segoe UI Semibold", 34.0!, FontStyle.Bold, GraphicsUnit.Point)
+        End If
+    End Sub
+    Private Sub percentage_BTN_Click(sender As Object, e As EventArgs) Handles percentage_BTN.Click
+
+        If op = " "c Then
+            main_TB.Text = 0
+            operand2 = 0
+            Return
+        End If
+        operand2 = Double.Parse(main_TB.Text)
+
+        main_TB.Text = operand1 * operand2 / 100
+        operand2 = Double.Parse(main_TB.Text)
+    End Sub
 
     Private Sub result_BTN_Click(sender As Object, e As EventArgs) Handles result_BTN.Click
 
@@ -154,10 +226,22 @@
                 main_TB.Text = operand1 * operand2
             Case "÷"c
                 main_TB.Text = operand1 / operand2
+            Case Else
+                formula_TB.Text = main_TB.Text + " = "
+                Return
         End Select
 
         formula_TB.Text = operand1.ToString() + " " + op + " " + operand2.ToString() + " = "
+
+        If main_TB.Text.Length > 13 Then
+            main_TB.Font = New Font("Segoe UI Semibold", 22.0!, FontStyle.Bold, GraphicsUnit.Point)
+        Else
+            main_TB.Font = New Font("Segoe UI Semibold", 34.0!, FontStyle.Bold, GraphicsUnit.Point)
+        End If
+
+        op = " "c
     End Sub
+
 
     Private Sub Calculate(_op As Char)
         formula_TB.Text = main_TB.Text + " " + _op
@@ -166,7 +250,6 @@
 
         op = _op
 
-        isDot = main_TB.Text.Contains("."c)
         isOperand2 = True
         isResult = False
     End Sub
