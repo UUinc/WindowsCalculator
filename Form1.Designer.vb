@@ -435,14 +435,14 @@ Partial Class Form1
         Me.formula_TB.BackColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer))
         Me.formula_TB.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.formula_TB.Cursor = System.Windows.Forms.Cursors.Arrow
-        Me.formula_TB.Font = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.formula_TB.Font = New System.Drawing.Font("Segoe UI", 11.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.formula_TB.ForeColor = System.Drawing.SystemColors.ActiveBorder
         Me.formula_TB.HideSelection = False
-        Me.formula_TB.Location = New System.Drawing.Point(4, 33)
+        Me.formula_TB.Location = New System.Drawing.Point(12, 39)
         Me.formula_TB.MaxLength = 33
         Me.formula_TB.Name = "formula_TB"
         Me.formula_TB.ReadOnly = True
-        Me.formula_TB.Size = New System.Drawing.Size(366, 27)
+        Me.formula_TB.Size = New System.Drawing.Size(350, 20)
         Me.formula_TB.TabIndex = 25
         Me.formula_TB.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
         '
