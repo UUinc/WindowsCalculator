@@ -22,6 +22,7 @@ Partial Class Form1
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form1))
         Me.main_TB = New System.Windows.Forms.TextBox()
         Me.percentage_BTN = New System.Windows.Forms.Button()
         Me.ce_BTN = New System.Windows.Forms.Button()
@@ -47,16 +48,19 @@ Partial Class Form1
         Me.comma_BTN = New System.Windows.Forms.Button()
         Me.num0_BTN = New System.Windows.Forms.Button()
         Me.sign_BTN = New System.Windows.Forms.Button()
+        Me.formula_TB = New System.Windows.Forms.TextBox()
         Me.SuspendLayout()
         '
         'main_TB
         '
-        Me.main_TB.Anchor = System.Windows.Forms.AnchorStyles.Top
+        Me.main_TB.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.main_TB.BackColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer))
         Me.main_TB.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.main_TB.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.main_TB.Font = New System.Drawing.Font("Segoe UI Semibold", 34.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.main_TB.ForeColor = System.Drawing.Color.White
         Me.main_TB.Location = New System.Drawing.Point(12, 66)
+        Me.main_TB.MaxLength = 13
         Me.main_TB.Name = "main_TB"
         Me.main_TB.ReadOnly = True
         Me.main_TB.Size = New System.Drawing.Size(350, 61)
@@ -66,6 +70,7 @@ Partial Class Form1
         '
         'percentage_BTN
         '
+        Me.percentage_BTN.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.percentage_BTN.BackColor = System.Drawing.Color.FromArgb(CType(CType(19, Byte), Integer), CType(CType(19, Byte), Integer), CType(CType(19, Byte), Integer))
         Me.percentage_BTN.FlatAppearance.BorderSize = 0
         Me.percentage_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -80,6 +85,7 @@ Partial Class Form1
         '
         'ce_BTN
         '
+        Me.ce_BTN.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.ce_BTN.BackColor = System.Drawing.Color.FromArgb(CType(CType(19, Byte), Integer), CType(CType(19, Byte), Integer), CType(CType(19, Byte), Integer))
         Me.ce_BTN.FlatAppearance.BorderSize = 0
         Me.ce_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -94,6 +100,7 @@ Partial Class Form1
         '
         'c_BTN
         '
+        Me.c_BTN.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.c_BTN.BackColor = System.Drawing.Color.FromArgb(CType(CType(19, Byte), Integer), CType(CType(19, Byte), Integer), CType(CType(19, Byte), Integer))
         Me.c_BTN.FlatAppearance.BorderSize = 0
         Me.c_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -108,13 +115,14 @@ Partial Class Form1
         '
         'back_BTN
         '
+        Me.back_BTN.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.back_BTN.BackColor = System.Drawing.Color.FromArgb(CType(CType(19, Byte), Integer), CType(CType(19, Byte), Integer), CType(CType(19, Byte), Integer))
         Me.back_BTN.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.back_BTN.FlatAppearance.BorderSize = 0
         Me.back_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.back_BTN.Font = New System.Drawing.Font("Segoe UI Semibold", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
         Me.back_BTN.ForeColor = System.Drawing.Color.White
-        Me.back_BTN.Image = New Bitmap(Global.Calculator.My.Resources.Resources.back, 24, 24)
+        Me.back_BTN.Image = CType(resources.GetObject("back_BTN.Image"), System.Drawing.Image)
         Me.back_BTN.Location = New System.Drawing.Point(280, 188)
         Me.back_BTN.Name = "back_BTN"
         Me.back_BTN.Size = New System.Drawing.Size(90, 58)
@@ -123,6 +131,7 @@ Partial Class Form1
         '
         'div_BTN
         '
+        Me.div_BTN.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.div_BTN.BackColor = System.Drawing.Color.FromArgb(CType(CType(19, Byte), Integer), CType(CType(19, Byte), Integer), CType(CType(19, Byte), Integer))
         Me.div_BTN.FlatAppearance.BorderSize = 0
         Me.div_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -137,6 +146,7 @@ Partial Class Form1
         '
         'sqrt_BTN
         '
+        Me.sqrt_BTN.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.sqrt_BTN.BackColor = System.Drawing.Color.FromArgb(CType(CType(19, Byte), Integer), CType(CType(19, Byte), Integer), CType(CType(19, Byte), Integer))
         Me.sqrt_BTN.FlatAppearance.BorderSize = 0
         Me.sqrt_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -151,6 +161,7 @@ Partial Class Form1
         '
         'square_BTN
         '
+        Me.square_BTN.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.square_BTN.BackColor = System.Drawing.Color.FromArgb(CType(CType(19, Byte), Integer), CType(CType(19, Byte), Integer), CType(CType(19, Byte), Integer))
         Me.square_BTN.FlatAppearance.BorderSize = 0
         Me.square_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -165,6 +176,7 @@ Partial Class Form1
         '
         'powMinus1_BTN
         '
+        Me.powMinus1_BTN.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.powMinus1_BTN.BackColor = System.Drawing.Color.FromArgb(CType(CType(19, Byte), Integer), CType(CType(19, Byte), Integer), CType(CType(19, Byte), Integer))
         Me.powMinus1_BTN.FlatAppearance.BorderSize = 0
         Me.powMinus1_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -179,6 +191,7 @@ Partial Class Form1
         '
         'mul_BTN
         '
+        Me.mul_BTN.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.mul_BTN.BackColor = System.Drawing.Color.FromArgb(CType(CType(19, Byte), Integer), CType(CType(19, Byte), Integer), CType(CType(19, Byte), Integer))
         Me.mul_BTN.FlatAppearance.BorderSize = 0
         Me.mul_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -193,6 +206,7 @@ Partial Class Form1
         '
         'num9_BTN
         '
+        Me.num9_BTN.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.num9_BTN.BackColor = System.Drawing.Color.FromArgb(CType(CType(6, Byte), Integer), CType(CType(6, Byte), Integer), CType(CType(6, Byte), Integer))
         Me.num9_BTN.FlatAppearance.BorderSize = 0
         Me.num9_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -207,6 +221,7 @@ Partial Class Form1
         '
         'num8_BTN
         '
+        Me.num8_BTN.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.num8_BTN.BackColor = System.Drawing.Color.FromArgb(CType(CType(6, Byte), Integer), CType(CType(6, Byte), Integer), CType(CType(6, Byte), Integer))
         Me.num8_BTN.FlatAppearance.BorderSize = 0
         Me.num8_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -221,6 +236,7 @@ Partial Class Form1
         '
         'num7_BTN
         '
+        Me.num7_BTN.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.num7_BTN.BackColor = System.Drawing.Color.FromArgb(CType(CType(6, Byte), Integer), CType(CType(6, Byte), Integer), CType(CType(6, Byte), Integer))
         Me.num7_BTN.FlatAppearance.BorderSize = 0
         Me.num7_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -235,6 +251,7 @@ Partial Class Form1
         '
         'sub_BTN
         '
+        Me.sub_BTN.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.sub_BTN.BackColor = System.Drawing.Color.FromArgb(CType(CType(19, Byte), Integer), CType(CType(19, Byte), Integer), CType(CType(19, Byte), Integer))
         Me.sub_BTN.FlatAppearance.BorderSize = 0
         Me.sub_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -249,6 +266,7 @@ Partial Class Form1
         '
         'num6_BTN
         '
+        Me.num6_BTN.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.num6_BTN.BackColor = System.Drawing.Color.FromArgb(CType(CType(6, Byte), Integer), CType(CType(6, Byte), Integer), CType(CType(6, Byte), Integer))
         Me.num6_BTN.FlatAppearance.BorderSize = 0
         Me.num6_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -263,6 +281,7 @@ Partial Class Form1
         '
         'num5_BTN
         '
+        Me.num5_BTN.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.num5_BTN.BackColor = System.Drawing.Color.FromArgb(CType(CType(6, Byte), Integer), CType(CType(6, Byte), Integer), CType(CType(6, Byte), Integer))
         Me.num5_BTN.FlatAppearance.BorderSize = 0
         Me.num5_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -277,6 +296,7 @@ Partial Class Form1
         '
         'num4_BTN
         '
+        Me.num4_BTN.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.num4_BTN.BackColor = System.Drawing.Color.FromArgb(CType(CType(6, Byte), Integer), CType(CType(6, Byte), Integer), CType(CType(6, Byte), Integer))
         Me.num4_BTN.FlatAppearance.BorderSize = 0
         Me.num4_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -291,6 +311,7 @@ Partial Class Form1
         '
         'add_BTN
         '
+        Me.add_BTN.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.add_BTN.BackColor = System.Drawing.Color.FromArgb(CType(CType(19, Byte), Integer), CType(CType(19, Byte), Integer), CType(CType(19, Byte), Integer))
         Me.add_BTN.FlatAppearance.BorderSize = 0
         Me.add_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -305,6 +326,7 @@ Partial Class Form1
         '
         'num3_BTN
         '
+        Me.num3_BTN.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.num3_BTN.BackColor = System.Drawing.Color.FromArgb(CType(CType(6, Byte), Integer), CType(CType(6, Byte), Integer), CType(CType(6, Byte), Integer))
         Me.num3_BTN.FlatAppearance.BorderSize = 0
         Me.num3_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -319,6 +341,7 @@ Partial Class Form1
         '
         'num2_BTN
         '
+        Me.num2_BTN.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.num2_BTN.BackColor = System.Drawing.Color.FromArgb(CType(CType(6, Byte), Integer), CType(CType(6, Byte), Integer), CType(CType(6, Byte), Integer))
         Me.num2_BTN.FlatAppearance.BorderSize = 0
         Me.num2_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -333,6 +356,7 @@ Partial Class Form1
         '
         'num1_BTN
         '
+        Me.num1_BTN.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.num1_BTN.BackColor = System.Drawing.Color.FromArgb(CType(CType(6, Byte), Integer), CType(CType(6, Byte), Integer), CType(CType(6, Byte), Integer))
         Me.num1_BTN.FlatAppearance.BorderSize = 0
         Me.num1_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -347,6 +371,7 @@ Partial Class Form1
         '
         'result_BTN
         '
+        Me.result_BTN.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.result_BTN.BackColor = System.Drawing.Color.FromArgb(CType(CType(21, Byte), Integer), CType(CType(91, Byte), Integer), CType(CType(104, Byte), Integer))
         Me.result_BTN.FlatAppearance.BorderSize = 0
         Me.result_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -361,6 +386,7 @@ Partial Class Form1
         '
         'comma_BTN
         '
+        Me.comma_BTN.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.comma_BTN.BackColor = System.Drawing.Color.FromArgb(CType(CType(6, Byte), Integer), CType(CType(6, Byte), Integer), CType(CType(6, Byte), Integer))
         Me.comma_BTN.FlatAppearance.BorderSize = 0
         Me.comma_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -375,6 +401,7 @@ Partial Class Form1
         '
         'num0_BTN
         '
+        Me.num0_BTN.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.num0_BTN.BackColor = System.Drawing.Color.FromArgb(CType(CType(6, Byte), Integer), CType(CType(6, Byte), Integer), CType(CType(6, Byte), Integer))
         Me.num0_BTN.FlatAppearance.BorderSize = 0
         Me.num0_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -389,6 +416,7 @@ Partial Class Form1
         '
         'sign_BTN
         '
+        Me.sign_BTN.Anchor = System.Windows.Forms.AnchorStyles.None
         Me.sign_BTN.BackColor = System.Drawing.Color.FromArgb(CType(CType(6, Byte), Integer), CType(CType(6, Byte), Integer), CType(CType(6, Byte), Integer))
         Me.sign_BTN.FlatAppearance.BorderSize = 0
         Me.sign_BTN.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -401,12 +429,30 @@ Partial Class Form1
         Me.sign_BTN.Text = "+/−"
         Me.sign_BTN.UseVisualStyleBackColor = False
         '
+        'formula_TB
+        '
+        Me.formula_TB.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.formula_TB.BackColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer))
+        Me.formula_TB.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.formula_TB.Cursor = System.Windows.Forms.Cursors.Arrow
+        Me.formula_TB.Font = New System.Drawing.Font("Segoe UI", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.formula_TB.ForeColor = System.Drawing.SystemColors.ActiveBorder
+        Me.formula_TB.HideSelection = False
+        Me.formula_TB.Location = New System.Drawing.Point(4, 33)
+        Me.formula_TB.MaxLength = 33
+        Me.formula_TB.Name = "formula_TB"
+        Me.formula_TB.ReadOnly = True
+        Me.formula_TB.Size = New System.Drawing.Size(366, 27)
+        Me.formula_TB.TabIndex = 25
+        Me.formula_TB.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer), CType(CType(31, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(374, 550)
+        Me.Controls.Add(Me.formula_TB)
         Me.Controls.Add(Me.result_BTN)
         Me.Controls.Add(Me.comma_BTN)
         Me.Controls.Add(Me.num0_BTN)
@@ -432,6 +478,9 @@ Partial Class Form1
         Me.Controls.Add(Me.ce_BTN)
         Me.Controls.Add(Me.percentage_BTN)
         Me.Controls.Add(Me.main_TB)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.MaximizeBox = False
+        Me.MinimumSize = New System.Drawing.Size(390, 589)
         Me.Name = "Form1"
         Me.ShowIcon = False
         Me.Text = "Calculator"
@@ -465,4 +514,5 @@ Partial Class Form1
     Friend WithEvents comma_BTN As Button
     Friend WithEvents num0_BTN As Button
     Friend WithEvents sign_BTN As Button
+    Friend WithEvents formula_TB As TextBox
 End Class
